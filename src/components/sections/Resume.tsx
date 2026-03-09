@@ -75,47 +75,27 @@ export default function Resume() {
                             <div className="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:20px_20px] opacity-20" />
 
                             <motion.div
-                                initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
-                                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
-                                className="relative w-full max-w-[340px] aspect-[1/1.4] bg-white rounded-lg shadow-2xl p-6 flex flex-col transform rotate-2 hover:rotate-0 transition-transform duration-500"
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                                className="relative w-full max-w-[400px] aspect-[1/1.4] bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col group"
                             >
-                                {/* Simulated resume document structure */}
-                                <div className="border-b-2 border-slate-200 pb-4 mb-4">
-                                    <div className="h-6 w-3/4 bg-slate-800 rounded mb-2" />
-                                    <div className="h-3 w-1/2 bg-slate-400 rounded" />
-                                </div>
-
-                                <div className="flex-1 space-y-4">
-                                    <div>
-                                        <div className="h-4 w-1/3 bg-slate-300 rounded mb-2" />
-                                        <div className="h-2 w-full bg-slate-200 rounded mb-1.5" />
-                                        <div className="h-2 w-full bg-slate-200 rounded mb-1.5" />
-                                        <div className="h-2 w-5/6 bg-slate-200 rounded" />
+                                <object
+                                    data="/resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitV"
+                                    type="application/pdf"
+                                    className="w-full h-full"
+                                >
+                                    <div className="w-full h-full flex flex-col items-center justify-center bg-card p-6 text-center border-t border-card-border">
+                                        <p className="text-foreground/70 mb-4">Preview not available in this browser.</p>
+                                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium hover:bg-primary-500 transition-colors">
+                                            Open Resume
+                                        </a>
                                     </div>
+                                </object>
 
-                                    <div>
-                                        <div className="h-4 w-1/3 bg-slate-300 rounded mb-2" />
-                                        <div className="h-2 w-full bg-slate-200 rounded mb-1.5" />
-                                        <div className="h-2 w-full bg-slate-200 rounded mb-1.5" />
-                                        <div className="h-2 w-4/6 bg-slate-200 rounded" />
-                                    </div>
-
-                                    <div className="pt-2 border-t border-slate-100 mt-auto">
-                                        <div className="flex gap-2 mb-2">
-                                            <div className="h-3 w-12 bg-blue-100 rounded-full" />
-                                            <div className="h-3 w-16 bg-blue-100 rounded-full" />
-                                            <div className="h-3 w-14 bg-blue-100 rounded-full" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Overlay gradient to fade out bottom */}
-                                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent rounded-b-lg pointer-events-none" />
-                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-slate-900 text-white text-xs font-bold rounded shadow-lg whitespace-nowrap">
-                                    PREVIEW FILE
-                                </div>
+                                {/* Overlay gradient to fade out bottom and prevent scroll trapping */}
+                                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
                             </motion.div>
                         </div>
                     </div>

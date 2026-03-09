@@ -15,7 +15,7 @@ export default function Footer() {
                             Ready to <span className="text-gradient">build together?</span>
                         </h2>
                         <p className="text-foreground/70 mb-8 max-w-md text-lg">
-                            Whether you need cloud infrastructure expertise, AI integration, or technical leadership for your next big project, let's talk.
+                            Whether you need cloud infrastructure expertise, AI integration, or technical leadership for your next big project, let&apos;s talk.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a

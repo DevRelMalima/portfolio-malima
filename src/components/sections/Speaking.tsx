@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mic, CheckCircle2, MapPin, CalendarDays, ExternalLink } from "lucide-react";
+import { Mic, MapPin, CalendarDays, ExternalLink } from "lucide-react";
 
 const speakingEngagements = [
     {
@@ -26,12 +26,12 @@ const speakingEngagements = [
     },
     {
         id: 3,
-        event: "Tech in Africa Summit",
+        event: "Decentralized Nigeria Conference",
         role: "Panelist",
-        topic: "The Future of DevOps in Emerging Markets",
-        date: "May 15, 2025",
-        location: "Virtual",
-        description: "Discussed how African startups are leapfrogging legacy systems and adopting pure cloud-native workflows from day one.",
+        topic: "Securing African Wallets: Navigating Bridge Risks, Scams & Cross-Chain Vulnerabilities in a Multi-Chain World",
+        date: "July 5, 2025",
+        location: "Civic Center, Lagos, Nigeria",
+        description: "A deep dive into the evolving landscape of digital asset security, highlighting the critical need for enhanced user education and robust infrastructure to mitigate risks associated with cross-chain bridges, smart contract exploits, and sophisticated phishing scams targeting African users.",
         link: "#"
     },
     {
@@ -42,7 +42,7 @@ const speakingEngagements = [
         date: "Feb 28, 2025",
         location: "Lagos, Nigeria",
         description: "A technical deep dive into CI/CD pipelines for Machine Learning models using GitHub Actions and Vertex AI.",
-        link: "#"
+        link: "https://www.coingabbar.com/en/event-details/decentralised-nigeria-conference-2025-lagos-crypto-event"
     }
 ];
 

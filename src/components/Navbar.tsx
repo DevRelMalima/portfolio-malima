@@ -67,7 +67,7 @@ export default function Navbar() {
                             className="px-5 py-2.5 text-sm font-medium rounded-full bg-primary-600 text-white hover:bg-primary-500 transition-colors shadow-lg shadow-primary-500/20"
                             onClick={(e) => handleScrollTo(e, '#contact')}
                         >
-                            Let's Connect
+                            Let&apos;s Connect
                         </a>
                     </div>
                     <div className="flex items-center md:hidden">
@@ -101,7 +101,7 @@ export default function Navbar() {
                             className="block px-3 py-3 mt-4 text-center text-base font-medium bg-primary-600 text-white rounded-lg transition-colors shadow-md"
                             onClick={(e) => handleScrollTo(e, '#contact')}
                         >
-                            Let's Connect
+                            Let&apos;s Connect
                         </a>
                     </div>
                 </div>

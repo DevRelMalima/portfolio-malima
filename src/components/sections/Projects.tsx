@@ -60,7 +60,7 @@ const projects = [
 ];
 
 // Helper icon
-function CloudIcon(props: any) {
+function CloudIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +203,7 @@ export default function Projects() {
     );
 }
 
-function ArrowRightIcon(props: any) {
+function ArrowRightIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

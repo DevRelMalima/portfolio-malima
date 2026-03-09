@@ -25,7 +25,7 @@ export default function Hero() {
                         </div>
 
                         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-                            Hi, I'm{" "}
+                            Hi, I&apos;m{" "}
                             <span className="text-gradient block mt-2">Samaila Anthony Malima</span>
                         </h1>
 

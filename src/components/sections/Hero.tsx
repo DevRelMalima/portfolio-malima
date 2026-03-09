@@ -66,36 +66,51 @@ export default function Hero() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="flex-1 w-full max-w-lg lg:max-w-none"
+                        className="flex-1 w-full max-w-sm lg:max-w-md mx-auto relative mt-12 lg:mt-0"
                     >
-                        <div className="relative aspect-square md:aspect-video lg:aspect-square bg-card rounded-2xl border border-card-border overflow-hidden shadow-2xl">
-                            <div className="absolute inset-x-0 top-0 h-10 bg-card-border/50 flex items-center px-4 gap-2">
-                                <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                                <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                                <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                            </div>
-                            <div className="p-6 pt-16 h-full flex flex-col font-mono text-sm sm:text-base text-foreground/80 overflow-hidden">
-                                <div className="flex items-center gap-2 mb-2">
-                                    <Terminal className="w-4 h-4 text-primary-400" />
-                                    <span className="text-secondary-400 font-bold">samuelmalima09@gmail.com</span>
-                                    <span>~ $ whoami</span>
-                                </div>
-                                <div className="mb-4 text-primary-300">samaila_anthony_malima</div>
+                        {/* Animated glowing backdrop */}
+                        <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 via-secondary-500 to-accent-500 rounded-[2rem] blur-2xl opacity-40 animate-pulse" />
 
-                                <div className="flex items-center gap-2 mb-2 break-all">
-                                    <Terminal className="w-4 h-4 text-primary-400 flex-shrink-0" />
-                                    <span className="text-secondary-400 font-bold">samuelmalima09@gmail.com</span>
-                                    <span>~ $ curl http://localhost/skills</span>
-                                </div>
-                                <div className="text-green-400 mb-4 whitespace-pre-wrap">
-                                    {`{\n  "role": "Cloud & AI Specialist",\n  "community": "GDG Ajah Organizer",\n  "experience": "5+ years",\n  "focus": [\n    "DevOps",\n    "AI Integration",\n    "Cloud Infrastructure"\n  ]\n}`}
-                                </div>
+                        <div className="relative aspect-[4/5] bg-card rounded-[2rem] border border-card-border shadow-2xl p-2 z-10">
+                            {/* Inner subtle glow */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-transparent rounded-[2rem] pointer-events-none" />
 
-                                <div className="flex items-center gap-2 animate-pulse mt-auto">
-                                    <Terminal className="w-4 h-4 text-primary-400" />
-                                    <div className="w-2.5 h-4 bg-foreground/60" />
-                                </div>
-                            </div>
+                            <motion.div
+                                animate={{ y: [0, -8, 0] }}
+                                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                                className="w-full h-full rounded-[1.5rem] overflow-hidden relative bg-card-border/30"
+                            >
+                                {/* The actual photo - the user will upload profile.jpg or profile.png to /public */}
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src="/profile.jpg"
+                                    alt="Samaila Anthony Malima"
+                                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                                    onError={(e) => {
+                                        // Fallback placeholder if photo is not yet uploaded
+                                        (e.target as HTMLImageElement).src = "https://ui-avatars.com/api/?name=Samaila+Malima&size=512&background=0f1115&color=38bdf8&bold=true";
+                                    }}
+                                />
+                            </motion.div>
+
+                            {/* Floating decorative widget 1 */}
+                            <motion.div
+                                animate={{ y: [0, 10, 0], rotate: [0, 5, 0] }}
+                                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
+                                className="absolute -right-6 top-16 bg-card border border-card-border p-3 rounded-2xl shadow-xl backdrop-blur-md hidden sm:block"
+                            >
+                                <Terminal className="w-6 h-6 text-primary-400" />
+                            </motion.div>
+
+                            {/* Floating decorative widget 2 */}
+                            <motion.div
+                                animate={{ y: [0, -10, 0], rotate: [0, -3, 0] }}
+                                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
+                                className="absolute -left-6 bottom-20 bg-card border border-card-border px-4 py-3 rounded-xl shadow-xl backdrop-blur-md flex items-center gap-3 hidden sm:flex"
+                            >
+                                <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.6)]" />
+                                <span className="text-sm font-bold text-foreground tracking-wide">5+ Yrs Exp</span>
+                            </motion.div>
                         </div>
                     </motion.div>
                 </div>

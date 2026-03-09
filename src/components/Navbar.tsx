@@ -18,8 +18,9 @@ export default function Navbar() {
     const navLinks = [
         { name: "About", href: "#about" },
         { name: "Projects", href: "#projects" },
-        { name: "Blog", href: "#blog" },
         { name: "Speaking", href: "#speaking" },
+        { name: "Certifications", href: "#certifications" },
+        { name: "Blog", href: "#blog" },
         { name: "Resume", href: "#resume" },
     ];
 
@@ -35,8 +36,8 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${isScrolled
-                    ? "bg-background/80 backdrop-blur-md border-card-border shadow-sm shadow-black/20"
-                    : "bg-transparent border-transparent"
+                ? "bg-background/80 backdrop-blur-md border-card-border shadow-sm shadow-black/20"
+                : "bg-transparent border-transparent"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
